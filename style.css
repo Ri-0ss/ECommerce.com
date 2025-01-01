@@ -1,0 +1,37 @@
+body {
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Places the video behind other content */
+    transform: translate(-50%, -50%);
+    filter: blur(5px); /* Adds blur effect to the video */
+    object-fit: cover; /* Ensures the video covers the entire background */
+}
+
+.form-container {
+    backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.8); /* Opaque white background */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    z-index: 1; /* Ensures the form appears above the video */
+}
+
+.form-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
