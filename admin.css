@@ -1,0 +1,245 @@
+body {
+    background-color: #f8f9fc;
+    font-family: 'Arial', sans-serif;
+}
+
+.sidebar {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 220px; 
+    background-color: #1c2230;
+    color: #ffffff;
+    /* height: 100vh; */
+    position: fixed;
+    /* width: 240px; */
+    padding: 20px 10px;
+    overflow-y: fixed;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: rgb(201, 197, 197);
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background-color: #34495e;
+    color: #ffffff;
+}
+
+.sidebar .menu-title {
+    font-weight: bold;
+    color: rgb(241, 216, 105);
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 15px 10px;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+#users
+{
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide all cards initially */
+    flex: 1;
+    text-align:left;
+    min-width: 100%;
+    margin-top: -20px;
+    transition: flex-basis 0.3s ease; /* Smooth transition for width adjustment */
+
+}
+#products
+{
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide all cards initially */
+    flex: 1;
+    text-align:left;
+    min-width: 100%;
+    margin-top: -20px;
+    transition: flex-basis 0.3s ease; /* Smooth transition for width adjustment */
+
+}
+#employee
+{
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide all cards initially */
+    flex: 1;
+    text-align:left;
+    min-width: 100%;
+    margin-top: -20px;
+    transition: flex-basis 0.3s ease; /* Smooth transition for width adjustment */
+
+}
+#product
+{
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide all cards initially */
+    flex: 1;
+    text-align:left;
+    min-width: 100%;
+    margin-top: -20px;
+    transition: flex-basis 0.3s ease; /* Smooth transition for width adjustment */
+
+}
+#purchases
+{
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide all cards initially */
+    flex: 1;
+    text-align:left;
+    min-width: 100%;
+    margin-top: -20px;
+    transition: flex-basis 0.3s ease; /* Smooth transition for width adjustment */
+
+}
+#inventory
+{
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide all cards initially */
+    flex: 1;
+    text-align:left;
+    min-width: 100%;
+    margin-top: -20px;
+    transition: flex-basis 0.3s ease; /* Smooth transition for width adjustment */
+
+}
+#contacts
+{
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide all cards initially */
+    flex: 1;
+    text-align:left;
+    min-width: 100%;
+    margin-top: -20px;
+    transition: flex-basis 0.3s ease; /* Smooth transition for width adjustment */
+
+}
+.dashboard-card.active-card {
+    display: block; /* Show only the active card */
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-top: 10px;
+}
+
+.table {
+    width: 100%;
+    table-layout: auto;
+}
+
+.table thead th,
+.table tbody td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table thead th {
+    background-color: #f8f9fc;
+    border: none;
+    font-size: 14px;
+    color: #6c757d;
+    text-transform: uppercase;
+    padding: 10px;
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+    /* Dashboard cards */
+
+.row {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: left; /* Center align the cards horizontally */
+padding: 20px; /* Add padding around the row for better spacing */
+}
+
+.dashboard-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px; /* Restrict maximum width to avoid overly large cards */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px); /* Add a hover effect for better interactivity */
+}
+.dashboard-card {
+display: none;
+}
+
+/* Ensure the dashboard card is displayed by default */
+#dashboard {
+    display: block;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        padding: 8px 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        position: relative;
+    }
+
+    .table {
+        font-size: 12px; /* Adjust font size for better readability on small screens */
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .table-responsive {
+        margin-top: 5px; /* Reduce margin for smaller screens */
+    }
+} 
+
